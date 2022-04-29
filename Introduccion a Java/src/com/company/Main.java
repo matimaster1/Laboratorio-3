@@ -321,6 +321,7 @@ public class Main {
             int k=scan.nextInt();
             list.add(k);
         }
+tica'}]
 
         for (int i=0; i< list.size(); i++){
             System.out.print(list.get(i)+" | ");
@@ -420,12 +421,6 @@ public class Main {
         System.out.println("Suma de dos numeros: "+suma(10,9));*/
         /*ejercicio7
         System.out.println("Resto dos numeros: "+resto(23,9));*/
-
-
-
-
-
-
 
     }
     public static int cociente(int a, int b, int result){
