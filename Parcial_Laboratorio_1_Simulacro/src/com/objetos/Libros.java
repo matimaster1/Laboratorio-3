@@ -16,5 +16,4 @@ public class Libros extends Revistas{
     public void setGenero(String genero) {
         this.genero = genero;
     }
-
 }
