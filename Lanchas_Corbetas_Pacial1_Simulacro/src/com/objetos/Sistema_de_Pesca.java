@@ -12,9 +12,9 @@ public class Sistema_de_Pesca {
         this.barcos = barcos;
     }
 
-    public String Recoleccion(String patente, int horas){
+    public String Recoleccion(Barcos patente, int horas){
         for (int i=0; i<barcos.size(); i++){
-            if (barcos.get(i).getPatente().equalsIgnoreCase(patente)){
+            if (barcos.get(i).equals(patente)){
                 if (barcos.get(i).isPescando()==false){
                     if (barcos.get(i) instanceof Lanchas_Amarillas){
                         double totalDelaPesca=((Lanchas_Amarillas) barcos.get(i)).recolectar(horas);
@@ -55,12 +55,4 @@ public class Sistema_de_Pesca {
         totalRecaudado=Corbetas.totalRecaudado+Lanchas_Amarillas.totalRecaudado;
         return totalRecaudado;
     }
-
-
-
-
-
-
-
-
 }

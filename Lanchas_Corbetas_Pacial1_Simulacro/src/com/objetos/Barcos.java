@@ -1,5 +1,7 @@
 package com.objetos;
 
+import java.util.Objects;
+
 public class Barcos {
     private String marca;
     private String modelo;
@@ -42,4 +44,18 @@ public class Barcos {
                 ", pescando=" + pescando +
                 "}\n";
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || this.getClass() != o.getClass()) return false;
+        Barcos barcos = (Barcos) o;
+        return capacidadDeCombustible == barcos.capacidadDeCombustible && capacidadDeCarga == barcos.capacidadDeCarga && pescando == barcos.pescando && Objects.equals(marca, barcos.marca) && Objects.equals(modelo, barcos.modelo) && Objects.equals(patente, barcos.patente);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(marca, modelo, capacidadDeCombustible, capacidadDeCarga, patente, pescando);
+    }
+
 }

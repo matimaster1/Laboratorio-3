@@ -19,11 +19,11 @@ public class Main {
 
         System.out.println(sistema_de_pesca.mostrarListado());
 
-        System.out.println(sistema_de_pesca.Recoleccion("LIT456", 0));
-        System.out.println(sistema_de_pesca.Recoleccion("AHJ567", 4));
-        System.out.println(sistema_de_pesca.Recoleccion("LIT456", 0));
+        System.out.println(sistema_de_pesca.Recoleccion(barco3, 0));
+        System.out.println(sistema_de_pesca.Recoleccion(barco1, 4));
+        System.out.println(sistema_de_pesca.Recoleccion(barco3, 0));
         sistema_de_pesca.ListarBarco("LIT456");
-        System.out.println(sistema_de_pesca.Recoleccion("LIT456", 0));
+        System.out.println(sistema_de_pesca.Recoleccion(barco3, 0));
 
         System.out.println("Lanchas total="+Lanchas_Amarillas.totalRecaudado);
         System.out.println("Corbetas total="+Corbetas.totalRecaudado);
