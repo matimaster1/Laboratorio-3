@@ -1,6 +1,8 @@
 package com.objetos;
 
-public class Album {
+import java.util.Objects;
+
+public class Album implements Comparable<Album>{
     private int añoDePublicacion;
     private Artista Artista;
     private String titulo;
@@ -38,5 +40,24 @@ public class Album {
     @Override
     public String toString() {
         return titulo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Album album = (Album) o;
+        return añoDePublicacion == album.añoDePublicacion && Objects.equals(Artista, album.Artista) && Objects.equals(titulo, album.titulo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(añoDePublicacion, Artista, titulo);
+    }
+
+    @Override
+    public int compareTo(Album o) {
+
+        return 0;
     }
 }
